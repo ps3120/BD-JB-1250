@@ -83,9 +83,10 @@ You will find **two ISOs** in the release:
 ---
 
 ### 7. Adding AIO fixes to Lapse.iso  
-The AIO fixes resolve black sreen and save data corruption issues in certain games. This is only needed for 1.00, 1.1 and 1.1b as of 1.2 the fixes are included in the ISO. 
-1. Place "aiofix_USBpayload.elf" on a USB drive and name it "payload.bin". 
-2. Place HEN or GoldHEN (or your desired post exploit payload) on the USB drive and name it "payload2.bin". 
+The AIO fixes resolve black screen and save data corruption issues in certain games.  
+This is only needed for 1.00, 1.1 and 1.1b as of 1.2 the fixes are included in the ISO. 
+1. Place "[aiofix_USBpayload.elf](https://github.com/Gezine/BD-JB-1250/blob/main/payloads/lapse/src/org/bdj/external/aiofix_USBpayload.elf)" on a USB drive and name it "payload.bin". 
+2. Place HEN or GoldHEN (or your desired post exploit payload) on the USB drive and name it "payload2.bin".  
 You will not need the USB drive again after the initial successfull run.
 ---
 
@@ -113,6 +114,7 @@ Replace the BDJO file in `BDMV` when building.
 * **[shahrilnet, null\_ptr](https://github.com/shahrilnet/remote_lua_loader)** — Lua Lapse implementation, without which BD-J Lapse was impossible.
 
 ---
+
 
 
 
