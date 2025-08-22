@@ -12,7 +12,7 @@ public class FileProxyDisabler {
      * Disable proxies by nulling the BDJFactory instance
      * This makes needProxy() return false, so real java.io.File objects are used
      */
-    public static void disableFileProxies() {
+    public static boolean disableFileProxies() {
         Status.println("=== Disabling BDJFactory Instance ===");
         
         try {
@@ -33,8 +33,14 @@ public class FileProxyDisabler {
             Status.println("New BDJFactory instance: " + 
                 (newInstance != null ? newInstance.getClass().getName() : "null"));
             
+            System.setProperty("java.io.tmpdir", "/download0/BD_BUDA/javatmp");
+            
+            return true;
+            
         } catch (Exception e) {
             Status.printStackTrace("Error disabling BDJFactory", e);
         }
+        
+        return false;
     }
 }

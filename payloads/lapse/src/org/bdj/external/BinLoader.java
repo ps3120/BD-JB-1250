@@ -27,7 +27,7 @@ public class BinLoader {
     private static final int NETWORK_PORT = 9020;
     private static final int READ_CHUNK_SIZE = 4096;
     
-    private static final String USBPAYLOAD_RESOURCE = "/org/bdj/external/USBpayload.elf";
+    private static final String USBPAYLOAD_RESOURCE = "/org/bdj/external/aiofix_USBpayload.elf";
     
     private static API api;
     private static byte[] binData;
@@ -254,8 +254,7 @@ public class BinLoader {
                     
                     Status.println("Payload execution completed with result: " + result);
                 } catch (Exception e) {
-                    Status.println("Payload execution error: " + e.getMessage());
-                    e.printStackTrace();
+                    Status.printStackTrace("Payload execution error: ", e);
                 }
             }
         });
@@ -389,30 +388,28 @@ public class BinLoader {
                     Status.println("BinLoader listening on port " + port);
                     
                 } catch (Exception e) {
-                    Status.println("Error processing payload: " + e.getMessage());
-                    e.printStackTrace();
+                    Status.printStackTrace("Error processing payload: ", e);
                 } finally {
                     // Close client socket
                     if (clientSocket != null) {
                         try {
                             clientSocket.close();
                         } catch (IOException e) {
-                            Status.println("Error closing client socket: " + e.getMessage());
+                            Status.printStackTrace("Error closing client socket: ", e);
                         }
                     }
                 }
             }
             
         } catch (Exception e) {
-            Status.println("Network server error: " + e.getMessage());
-            e.printStackTrace();
+            Status.printStackTrace("Network server error: ", e);
         } finally {
             // Close server socket
             if (serverSocket != null) {
                 try {
                     serverSocket.close();
                 } catch (IOException e) {
-                    Status.println("Error closing server socket: " + e.getMessage());
+                    Status.printStackTrace("Error closing server socket: ", e);
                 }
             }
         }

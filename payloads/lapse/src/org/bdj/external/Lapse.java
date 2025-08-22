@@ -29,6 +29,7 @@ import org.bdj.Status;
 import org.bdj.api.*;
 
 public class Lapse {
+    private static final String VERSION_STRING = "BD-J Lapse 1.2 by Gezine";
 
     public static final int MAIN_CORE = 4;
     public static final int MAIN_RTPRIO = 0x100;
@@ -1389,20 +1390,21 @@ public class Lapse {
     }
     
     public static void printReboot() {
-        Status.println("Reboot and try again");
-        Status.println("Sending JAR again without rebooting is not recommended");
+        NativeInvoke.sendNotificationRequest("Exploit failed - Reboot and try again");
+        Status.println("Exploit failed - Reboot and try again");
     }
 
 
     public static void main(String[] args) {
+        NativeInvoke.sendNotificationRequest(VERSION_STRING);
         Status.println("=== LAPSE EXPLOIT ===");
         
         try {
             initializeExploit();
                     
             if (Helper.isJailbroken()) {
-                Status.println("Already Jailbroken");
                 NativeInvoke.sendNotificationRequest("Already Jailbroken");
+                Status.println("Already Jailbroken");
                 return;
             }
             
