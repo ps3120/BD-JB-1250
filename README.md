@@ -42,7 +42,7 @@ You will find **two ISOs** in the release:
 ### 3. PS4 Settings
 
 * **Enable HDCP** in Settings (required for Blu-ray playback).
-* If Blu-ray playback is **not yet activated** which can happen if you are using blue-ray disc for the first time:
+* If Blu-ray playback is **not yet activated** which can happen if you are using blu-ray disc for the first time:
 
   * **Disable Automatic Updates** first to avoid firmware upgrades.
   * Connect to the internet once to activate it.
@@ -116,6 +116,7 @@ Replace the BDJO file in `BDMV` when building.
 * **[shahrilnet, null\_ptr](https://github.com/shahrilnet/remote_lua_loader)** — Lua Lapse implementation, without which BD-J Lapse was impossible.
 
 ---
+
 
 
 
