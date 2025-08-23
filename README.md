@@ -86,11 +86,15 @@ You will find **two ISOs** in the release:
 The AIO fixes resolve black screen and save data corruption issues in certain games.  
 **This is only needed for Lapse 1.0, 1.1 and 1.1b** as of 1.2 the fixes are included in the ISO.  
 Do not use any other AIO related fix or plugins with this.  
+
+Video Explanation by @MODDED_WARFARE  
+https://youtu.be/8LJ4ZFjr2Rw
+
 1. Load payload.bin (goldhen or ps4-hen) normally from USB.
 2. Send "[aiofix_network.elf](https://github.com/Gezine/BD-JB-1250/blob/main/payloads/lapse/src/org/bdj/external/aiofix_network.elf)" to HEN's BinLoader using network after HEN is initialized.  
 3. You will get AIO patch completed notification.
 4. You need to send this elf file everytime you run Lapse exploit.  
-5. Or make elf to plugin to load automatically when HEN is loaded.  
+5. Or make elf to plugin to load automatically when HEN is loaded.   
 ---
 
 ### 8. Summary Table
@@ -117,6 +121,7 @@ Replace the BDJO file in `BDMV` when building.
 * **[shahrilnet, null\_ptr](https://github.com/shahrilnet/remote_lua_loader)** — Lua Lapse implementation, without which BD-J Lapse was impossible.
 
 ---
+
 
 
 
