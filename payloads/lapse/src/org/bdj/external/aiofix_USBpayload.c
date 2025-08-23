@@ -464,9 +464,7 @@ void payload99() {
     
     for (int i = 0; i < 5; i++) {
         if (file_exists(payload99_paths[i])) {
-            char notification[128];
-            snprintf(notification, sizeof(notification), "payload99.bin found on usb - executing...", i);
-            send_notification(notification);
+            send_notification("payload99.bin found on usb - executing...");
             execute_payload_from_path(payload99_paths[i]);
             break;
         }
@@ -482,7 +480,7 @@ int main() {
     int patch_result = patch_aio((void*)KERNEL_ADDRESS_IMAGE_BASE);
     
     if (patch_result == 1) {
-        setup_payload_paths("payload2.bin");
+        return 0;
     } else {
         setup_payload_paths("payload.bin");
     }
