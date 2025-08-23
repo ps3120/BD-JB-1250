@@ -89,7 +89,12 @@ Do not use any other AIO related fix or plugins with this.
 1. Place "[aiofix_USBpayload.elf](https://github.com/Gezine/BD-JB-1250/blob/main/payloads/lapse/src/org/bdj/external/aiofix_USBpayload.elf)" on a USB drive and name it "payload.bin". 
 2. Place HEN or GoldHEN (or your desired post exploit payload) on the USB drive and name it "payload2.bin".  
 You will not need the USB drive again after the initial successful run.  
-In short, put payload.bin (aiofix) and payload2.bin (HEN) at USB.  
+In short, put payload.bin (aiofix) and payload2.bin (HEN) at USB.
+
+**If you are experiencing crashes**  
+1. Place HEN or GoldHEN (or your desired post exploit payload) on the USB drive and name it "payload.bin".  
+2. Send "[aiofix_network.elf](https://github.com/Gezine/BD-JB-1250/blob/main/payloads/lapse/src/org/bdj/external/aiofix_network.elf)" to HEN's BinLoader using network after HEN is initialized  
+
 ---
 
 ### 8. Summary Table
@@ -116,6 +121,7 @@ Replace the BDJO file in `BDMV` when building.
 * **[shahrilnet, null\_ptr](https://github.com/shahrilnet/remote_lua_loader)** — Lua Lapse implementation, without which BD-J Lapse was impossible.
 
 ---
+
 
 
 
