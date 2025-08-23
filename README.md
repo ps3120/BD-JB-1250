@@ -88,7 +88,9 @@ The AIO fixes resolve black screen and save data corruption issues in certain ga
 Do not use any other AIO related fix or plugins with this.  
 1. Load payload.bin (goldhen or ps4-hen) normally from USB.
 2. Send "[aiofix_network.elf](https://github.com/Gezine/BD-JB-1250/blob/main/payloads/lapse/src/org/bdj/external/aiofix_network.elf)" to HEN's BinLoader using network after HEN is initialized.  
-3. You will get AIO patch completed notification.  
+3. You will get AIO patch completed notification.
+4. You need to send this elf file everytime you run Lapse exploit.  
+5. Or make elf to plugin to load automatically when HEN is loaded.  
 ---
 
 ### 8. Summary Table
@@ -115,6 +117,7 @@ Replace the BDJO file in `BDMV` when building.
 * **[shahrilnet, null\_ptr](https://github.com/shahrilnet/remote_lua_loader)** — Lua Lapse implementation, without which BD-J Lapse was impossible.
 
 ---
+
 
 
 
