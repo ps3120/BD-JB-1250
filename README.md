@@ -84,7 +84,7 @@ You will find **two ISOs** in the release:
 
 ### 7. Adding AIO fixes to Lapse.iso  
 The AIO fixes resolve black screen and save data corruption issues in certain games.  
-**This is only needed for 1.00, 1.1 and 1.1b** as of 1.2 the fixes are included in the ISO.  
+**This is only needed for Lapse 1.0, 1.1 and 1.1b** as of 1.2 the fixes are included in the ISO.  
 Do not use any other AIO related fix or plugins with this.  
 1. Load payload.bin (goldhen or ps4-hen) normally from USB.
 2. Send "[aiofix_network.elf](https://github.com/Gezine/BD-JB-1250/blob/main/payloads/lapse/src/org/bdj/external/aiofix_network.elf)" to HEN's BinLoader using network after HEN is initialized.  
@@ -117,6 +117,7 @@ Replace the BDJO file in `BDMV` when building.
 * **[shahrilnet, null\_ptr](https://github.com/shahrilnet/remote_lua_loader)** — Lua Lapse implementation, without which BD-J Lapse was impossible.
 
 ---
+
 
 
 
