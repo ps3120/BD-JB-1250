@@ -422,10 +422,13 @@ void execute_payload_from_path(const char* payload_path) {
 }
 
 void run_usb_payload_logic() {
+bool ExternalPayload=false;
+    
     // Priority 1: Check for USB payload on usb0-usb4
     for (int i = 0; i < 5; i++) {
         const char* usb_path = USB_PAYLOAD_PATHS[i];
         if (file_exists(usb_path)) {
+            ExternalPayload=true;
             char notification[128];
             snprintf(notification, sizeof(notification), "USB %s found - executing...", 
                     strrchr(usb_path, '/') + 1);
@@ -445,11 +448,19 @@ void run_usb_payload_logic() {
 
     // Priority 2: Check for existing payload in data directory
     if (file_exists(DATA_PAYLOAD_PATH)) {
+        ExternalPayload=true;
         char notification[128];
         snprintf(notification, sizeof(notification), "%s found - executing...", DATA_PAYLOAD_PATH);
         send_notification(notification);
         execute_payload_from_path(DATA_PAYLOAD_PATH);
         return;
+    }
+
+     // load goldhen from BD if external payload is not present
+    if(!ExternalPayload){
+        execute_payload_from_path("/org/bdj/external/goldhen.bin");
+        return;
+
     }
 
 }
