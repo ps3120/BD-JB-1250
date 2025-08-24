@@ -25,13 +25,12 @@ void patch_aio(void * kbase) {
     unsigned long found = kernel_find_pattern((unsigned long)kbase, 0xC00000, search_pattern);
     
     if (!found) {
-        send_notification("Pattern not found - patch aborted");
+        send_notification("AIO already patched");
         return;
     }
     
     // Calculate base offset from the found pattern
     size_t base_offset = found - (unsigned long)kbase;
-    send_notification("Pattern found - applying patches");
     
     // Apply patches using relative offsets from the found pattern
     {
