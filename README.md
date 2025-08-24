@@ -7,7 +7,7 @@ Just take my early Christmas gift :)
 
 No this won't work at PS5.  
 
-You need to turn off "Disable Pop-ups while playing video" on notification setting to get notification.  
+You need to turn off **"Disable Pop-ups while playing video"** on notification setting to get notification.  
 
 ---
 
@@ -122,6 +122,7 @@ Replace the BDJO file in `BDMV` when building.
 * **[shahrilnet, null\_ptr](https://github.com/shahrilnet/remote_lua_loader)** — Lua Lapse implementation, without which BD-J Lapse was impossible.
 
 ---
+
 
 
 
