@@ -497,6 +497,6 @@ int main() {
     }
 
     run_usb_payload_logic();
-    
+    kill(getpid(), 15);
     return 0;
 }
