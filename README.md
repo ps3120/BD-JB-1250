@@ -109,8 +109,9 @@ https://youtu.be/8LJ4ZFjr2Rw
 
 ### 9. Compilation Recommendation
 
-Use **[john-tornblom's bdj-sdk](https://github.com/john-tornblom/bdj-sdk/)** for compiling.
-Replace the BDJO file in `BDMV` when building.
+Use john-tornblom's [BDJ-SDK](https://github.com/john-tornblom/bdj-sdk) and [ps4-payload-sdk](https://github.com/ps4-payload-dev/sdk) for compiling.  
+Required rt.jar and bdjstack.jar are under PS4's /system_ex/app/NPXS20113  
+Replace the BDJO file in `BDMV` when building.  
 
 ---
 
@@ -122,6 +123,7 @@ Replace the BDJO file in `BDMV` when building.
 * **[shahrilnet, null\_ptr](https://github.com/shahrilnet/remote_lua_loader)** — Lua Lapse implementation, without which BD-J Lapse was impossible.
 
 ---
+
 
 
 
