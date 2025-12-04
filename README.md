@@ -1,4 +1,4 @@
-# BD-JB-1250
+# BD-JB-1252
 BD-JB for up to PS4 12.50  
 ~~This might be the exploit that was reported by TheFlow and patched at 12.52~~  
 Nope TheFlow just confirmed this is not his exploit.  
@@ -123,6 +123,7 @@ Replace the BDJO file in `BDMV` when building.
 * **[shahrilnet, null\_ptr](https://github.com/shahrilnet/remote_lua_loader)** — Lua Lapse implementation, without which BD-J Lapse was impossible.
 
 ---
+
 
 
 
