@@ -28,8 +28,7 @@ package org.bdj.external;
 import org.bdj.Status;
 import org.bdj.api.*;
 
-public class Lapse {
-    private static final String VERSION_STRING = "BD-J Lapse 1.2 by Gezine";
+public class Lapse{
 
     public static final int MAIN_CORE = 4;
     public static final int MAIN_RTPRIO = 0x100;
@@ -1396,7 +1395,6 @@ public class Lapse {
 
 
     public static void main(String[] args) {
-        NativeInvoke.sendNotificationRequest(VERSION_STRING);
         Status.println("=== LAPSE EXPLOIT ===");
         
         try {
