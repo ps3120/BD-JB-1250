@@ -27,7 +27,7 @@ public class BinLoader {
     private static final int NETWORK_PORT = 9020;
     private static final int READ_CHUNK_SIZE = 4096;
     
-    private static final String USBPAYLOAD_RESOURCE = "/org/bdj/external/aiofix_USBpayload.elf";    
+    private static final String USBPAYLOAD_RESOURCE = "/org/bdj/external/USBpayload.elf";    
     
     private static API api;
     private static byte[] binData;
