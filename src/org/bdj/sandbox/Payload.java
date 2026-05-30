@@ -13,12 +13,15 @@ import java.security.PrivilegedExceptionAction;
 
 /** Payload class that is loaded with all permissions in order to disable the security manager. */
 public class Payload implements PrivilegedExceptionAction {
-  public Payload() throws PrivilegedActionException {
-    AccessController.doPrivileged(this);
+  private Payload() {
   }
 
-  public Object run() throws Exception {
+  public Object run() {
     System.setSecurityManager(null);
-    return null;
+    return System.getSecurityManager();
+  }
+
+  public static SecurityManager execute() throws PrivilegedActionException {
+        return (SecurityManager) AccessController.doPrivileged(new Payload());
   }
 }

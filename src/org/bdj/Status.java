@@ -2,10 +2,15 @@ package org.bdj;
 
 public class Status {
     private static RemoteLogger LOGGER;
-    private static volatile boolean WINDOW = false;
+    private static volatile boolean WINDOWBOOL = false;
+    private static volatile boolean LOGGERBOOL = false;
 
     public static void setScreenOutputEnabled(boolean windowbool) {
-        WINDOW = windowbool;
+        WINDOWBOOL = windowbool;
+    }
+
+    public static void setNetworkLoggerEnabled(boolean networkbool) {
+        LOGGERBOOL = networkbool;
     }
 
     private static synchronized void initLogger() {
@@ -32,18 +37,22 @@ public class Status {
 
     public static void println(String msg) {
         String finalMsg = "[" + Thread.currentThread().getName() + "] " + msg;
-        initLogger();
-        LOGGER.println(finalMsg);
-        if (WINDOW) {
+        if (LOGGERBOOL) {
+            initLogger();
+            LOGGER.println(finalMsg);
+        }
+        if (WINDOWBOOL) {
             Screen.println(finalMsg);
         }
     }
 
     public static void printStackTrace(String msg, Throwable e) {
         String finalMsg = "[" + Thread.currentThread().getName() + "] " + msg;
-        initLogger();
-        LOGGER.printStackTrace(finalMsg, e);
-        if (WINDOW) {
+        if (LOGGERBOOL) {
+            initLogger();
+            LOGGER.printStackTrace(finalMsg, e);
+        }
+        if (WINDOWBOOL) {
             Screen.printStackTrace(finalMsg, e);
         }
     }
